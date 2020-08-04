@@ -1,3 +1,30 @@
-
-include
-?1231234567adcvxvxvxvcx
+//1,将JS嵌入元素中
+//内容排版引擎处理
+<html>
+    <body>
+        <button onclick="console.log('Hello World');">
+                打印消息
+        </button>
+    </body>
+</html>//脚本解释引擎处理
+//2，将JS代码嵌入在<script>标记中，可在任何位置
+<html>
+    <body>
+        页头
+        <hr/>
+        <script>
+                document.write('...');
+                console.log('...');
+        </script>
+        <hr/>
+        页尾
+    </body>
+</html>
+//3，JS代码写在外部脚本
+<html>
+    <head>
+        <script src="myscript.js"></script>
+    </head>
+    <body>
+    </body>
+</html>
