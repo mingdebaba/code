@@ -28,3 +28,15 @@
     <body>
     </body>
 </html>
+//js的添加方式 1行内，2内嵌，3外部
+//行内添加就是将JS写在某一个标签之内。
+<button onclick="alert('行内JS')">单击</button>
+//内嵌写在head里面
+<script>
+    alert(‘...’);
+</script>
+ //外部，新建一个后缀为js的文件，然后再其他文件中引用，
+// 文件中添加script标签，然后在设置src属性，
+ <script>
+ <script src="pop.js">
+ </srcipt>
