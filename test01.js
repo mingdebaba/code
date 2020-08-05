@@ -39,4 +39,4 @@
 // 文件中添加script标签，然后在设置src属性，
  <script>
  <script src="pop.js">
- </srcipt>
+ </script>
