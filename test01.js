@@ -40,3 +40,9 @@
  <script>
  <script src="pop.js">
  </script>
+ 
+ </script>
+ //定义带参数函数
+ function函数名（参数列表声明）{
+     //代码块（函数体，功能体，方法体）
+ }
