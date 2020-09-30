@@ -1,0 +1,9 @@
+wx:if判断单个组件。
+wx:elif和wx:else来添加多分支结构
+block wx:if判断多个组件，即包装多个wx:if
+wx:for 列表渲染单个组件
+block wx:for ......多个组件
+wx:key 指定唯一关键符
+wx:for-item指定数组当前变量名
+wx:for-index可以指定数组下标
+wx:key [字符串][保留关键字]

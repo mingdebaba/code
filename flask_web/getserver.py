@@ -1,4 +1,5 @@
-import flaskapp=flask.Flask(__name__)
+import flask
+app=flask.Flask(__name__)
 @app.route("/")
 def index():
     p=flask.request.args.get("provice")
