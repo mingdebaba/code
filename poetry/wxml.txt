@@ -7,3 +7,30 @@ wx:key 指定唯一关键符
 wx:for-item指定数组当前变量名
 wx:for-index可以指定数组下标
 wx:key [字符串][保留关键字]
+
+wx_app，template
+    公用复用
+
+
+定义模板
+<template/> 使用name属性
+
+<template name= "msgltem">
+    <view>
+        <text> {{index}}:{{msg}}
+        <text>Time:{{time}}</text>
+    <view>
+</template>
+
+
+使用模板 in .wxml 使用is属性
+<template is="msgltem" data= "{{item}}" />
+Page([
+    data:{
+        item:{
+            index:0,
+            msg:'模板'，
+            time:'2019-06-16'
+        }
+    }
+])    
