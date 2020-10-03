@@ -1,0 +1,42 @@
+import引用
+include引用
+在wxml中引用。
+import引用模板文件
+include引用整个除了<template/>的文件
+
+
+
+<!--index.wxml-->
+<include src="header.wxml" />
+<view>页面主体</view>
+<include src="footer.wxml" />
+
+<!--header.wxml-->
+<view>头文件</view>
+<!--footer.wxml-->
+<view>尾文件</view>
+
+
+
+WXS小程序脚本语言。
+模块化/变量和数据类型
+js/wxml/WXS
+结合WXML页面文件进行处理，有两种使用方式：
+    将WXS脚本嵌入到WXML页面中
+    
+    以.wxs后缀接吻的文件单独处理
+
+
+WXS注释方式
+    单行注释
+    //var....
+    多行注释
+    /*
+    var a=1;
+    var ...
+    */
+    结尾注释
+    /*
+    var a=1;
+    ....
+    </wxs>
