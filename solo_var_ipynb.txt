@@ -1,0 +1,79 @@
+#装备数据
+#构建模型
+#训练模型
+#进行预测
+
+import tensorflow as tf 
+import numpy as np 
+import matplotlib.pyplot as plt 
+%matplotlib inline
+print("版本",tf._version_)
+
+
+x_data =np.linespace(-1,1,100)
+np.random.seed(5)
+y_data = 2*x_data+1.0+np.random.randn(*x_data.shape)*0.4
+
+np.random.randn(10)
+
+x_data.shape
+
+y_data = 2*x_data +1.0+np.random.randn(100)*0.4
+
+x_data,y_data
+
+plt.scatter(x_data,y_data)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.titil("1")
+
+
+plt.scatter(x_data,y_data)
+
+plt.plot(x_data,1.0+2*x_data,'r',linewidth=3)
+
+def model(x,w,b)
+    teturn tf.multiply(x,w)+b
+
+w = tf.Variable(np.random.randn(),tf.float32)
+b = tf.Variable(0.0,tf.float32)
+
+def loss(x,y,w,b):
+    err = model(x,w,b)-y
+    squared_err = tf.square(err)
+    return tf.reduce_mean(squared_err)
+
+training_epochs = 10
+learning_rate =0.01
+
+def_grad(x,y,w,b):
+    with tf.GradientTape() as tape:
+        loss_ = loss(x,y,w,b)
+    return tape.gradient(loss_,[w,b])
+
+step = 0
+loss_list = []
+display_step = 10
+
+for epoch in tange(training_epochs):
+    for xs,s in zip(x_data,y_data):
+        loss_ = loss(xs,ys,w,b)
+        loss_list.append(loss_)
+        delta_w,delta_b = grad(xs,ys,w,b)
+        change_w = delta_w *learning_rate
+        change_b = delta_b* learning_rate
+        w.assign_sub(change_w)
+        b.assign_sub(change_b)
+
+        step = step + 1
+        if step %display_step == 0:
+            print("Training Epoch:",'%02d' % (epoch+1),"Step"%03d" %(step),plt.plot(x_data.w.numpy()* x_data+b.numpy())
+
+x_text =3.21
+predict =model(x_test,w.numpy(),b.numpy())
+print("预测值：%f" %predict)
+
+target = 2*x_test+1.0
+print("目标值：%f"% target)
+
+plt.plot(loss_list)
