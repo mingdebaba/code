@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 25 20:10:40 2018
+
+@author: Administrator
+"""
+
+import tensorflow as tf
+from tensorflow.python.client import timeline
+
+x = tf.random_normal([1000, 1000])  # 随机矩阵
+y = tf.random_normal([1000, 1000])
+res = tf.matmul(x, y)
+
+# Run the graph with full trace option
+with tf.Session() as sess:
+    run_options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE)
+    run_metadata = tf.RunMetadata()
+    sess.run(res, options=run_options, run_metadata=run_metadata)
+
+    # Create the Timeline object, and write it to a json
+    tl = timeline.Timeline(run_metadata.step_stats)
+    ctf = tl.generate_chrome_trace_format()
+    with open('timeline.json', 'w') as f:
+        f.write(ctf)
