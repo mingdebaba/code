@@ -2,8 +2,8 @@ from depixlib.LoadedImage import *
 from depixlib.Rectangle import *
 from depixlib.functions import *
 
-import argparse
-import logging
+import  argparse
+import  logging
 logging.basicConfig(level=logging.INFO)
 
 
